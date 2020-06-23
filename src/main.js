@@ -1,12 +1,17 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
+import App from '@/App.vue';
+import VModal from 'vue-js-modal';
+import BootstrapVue from 'bootstrap-vue';
+import store from '@/store/index.js'
+import '@/styles/index.scss';
 
 Vue.config.productionTip = false
 
+Vue.use(BootstrapVue);
+Vue.use(VModal);
+
+
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+  render: h => h(App),
+  store
 }).$mount('#app')
